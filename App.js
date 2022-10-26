@@ -110,7 +110,7 @@ export default function App() {
 
       {/* form */}
       <View style={styles.formContainer}>
-        <Text style={styles.note}>NOTE: Please make sure to fill-up all fields below and use CAPITAL LETTERS only.</Text>
+        <Text style={styles.note}>NOTE: Please make sure to fill-up all fields below.</Text>
 
         {/* name */}
         <View style={styles.field}>
