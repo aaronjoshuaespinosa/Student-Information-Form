@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, View, StyleSheet, TouchableOpacity, Modal} from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity, Modal, Image } from 'react-native';
 import { TextInput } from 'react-native-paper';
 
 import { styles } from './styles';
@@ -75,10 +75,11 @@ export default function App() {
         <View style={styles.modalContainer}>
           <View style={styles.modal}>
             <Text style={styles.modalTitleSuccess}>SUCCESS</Text>
+            <Image style={styles.modalImg} source={require('./assets/check.png')} />
             <Text style={styles.modalTxt}>Your entry has been recorded successfully!</Text>
-              <TouchableOpacity onPress={() => setModalVisibleSuccess(!modalVisibleSuccess)} style={styles.modalBtnSuccess}>
-                <Text style={styles.modalBtnSuccessTxt}>OK</Text>
-              </TouchableOpacity>
+            <TouchableOpacity onPress={() => setModalVisibleSuccess(!modalVisibleSuccess)} style={styles.modalBtnSuccess}>
+              <Text style={styles.modalBtnSuccessTxt}>OK</Text>
+            </TouchableOpacity>
           </View>
         </View>
       </Modal>
@@ -95,14 +96,15 @@ export default function App() {
         <View style={styles.modalContainer}>
           <View style={styles.modal}>
             <Text style={styles.modalTitleAlert}>ALERT</Text>
+            <Image style={styles.modalImg} source={require('./assets/alert.png')} />
             <Text style={styles.modalTxt}>Please fill in all input fields.</Text>
-              <TouchableOpacity onPress={() => setModalVisibleAlert(!modalVisibleAlert)} style={styles.modalBtnAlert}>
-                <Text style={styles.modalBtnAlertTxt}>OK</Text>
-              </TouchableOpacity>
+            <TouchableOpacity onPress={() => setModalVisibleAlert(!modalVisibleAlert)} style={styles.modalBtnAlert}>
+              <Text style={styles.modalBtnAlertTxt}>OK</Text>
+            </TouchableOpacity>
           </View>
         </View>
       </Modal>
-      
+
       {/* header */}
       <View style={styles.headerContainer}>
         <Text style={styles.headerTxt}>Student Information</Text>
@@ -114,18 +116,21 @@ export default function App() {
 
         {/* name */}
         <View style={styles.field}>
+          <Text style={styles.tiTitle}>Name</Text>
           <TextInput
-            placeholder="Name"
+            placeholder="Akaza Donut Rengoku"
             style={styles.fieldPlaceholder}
             mode="outlined"
             onChangeText={(value) => setTextInputName(value)}
+            clearButtonMode='always'
           />
         </View>
 
         {/* stud number */}
         <View style={styles.field}>
+          <Text style={styles.tiTitle}>Student Number</Text>
           <TextInput
-            placeholder="Student Number"
+            placeholder="202212345"
             style={styles.fieldPlaceholder}
             mode="outlined"
             onChangeText={(value) => setTextInputStudNum(value)}
@@ -135,8 +140,9 @@ export default function App() {
         {/* course */}
         <View style={styles.duoFieldContainer}>
           <View style={styles.duoField1}>
+            <Text style={styles.tiTitle}>Course</Text>
             <TextInput
-              placeholder="Course"
+              placeholder="BSCS"
               style={styles.fieldPlaceholder}
               mode="outlined"
               onChangeText={(value) => setTextInputCourse(value)}
@@ -145,8 +151,9 @@ export default function App() {
 
           {/* yrSec */}
           <View style={styles.duoField2}>
+            <Text style={styles.tiTitle}>Year & Section</Text>
             <TextInput
-              placeholder="Year & Section"
+              placeholder="1-1"
               style={styles.fieldPlaceholder}
               mode="outlined"
               onChangeText={(value) => setTextInputYrSec(value)}
@@ -157,18 +164,20 @@ export default function App() {
         {/* age */}
         <View style={styles.duoFieldContainer}>
           <View style={styles.duoField1}>
+            <Text style={styles.tiTitle}>Age</Text>
             <TextInput
-              placeholder="Age"
+              placeholder="18"
               style={styles.fieldPlaceholder}
               mode="outlined"
               onChangeText={(value) => setTextInputAge(value)}
-              />
+            />
           </View>
 
           {/* bday */}
           <View style={styles.duoField2}>
+            <Text style={styles.tiTitle}>Birthday</Text>
             <TextInput
-              placeholder="Birthday"
+              placeholder="01/01/1969"
               style={styles.fieldPlaceholder}
               mode="outlined"
               onChangeText={(value) => setTextInputBday(value)}
@@ -178,8 +187,9 @@ export default function App() {
 
         {/* address */}
         <View style={styles.field}>
+          <Text style={styles.tiTitle}>Address</Text>
           <TextInput
-            placeholder="Address"
+            placeholder="Tagaytay City"
             style={styles.fieldPlaceholder}
             mode="outlined"
             onChangeText={(value) => setTextInputAdd(value)}
