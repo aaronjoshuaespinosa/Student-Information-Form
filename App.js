@@ -107,6 +107,7 @@ export default function App() {
 
       {/* header */}
       <View style={styles.headerContainer}>
+        <Image style={styles.headerImg} source={require('./assets/headerImg.png')} />
         <Text style={styles.headerTxt}>Student Information</Text>
       </View>
 
@@ -198,12 +199,6 @@ export default function App() {
 
         {/* btns */}
         <View style={styles.btns}>
-
-          {/* cancel bts */}
-          <TouchableOpacity style={styles.cancelBtn}>
-            <Text style={styles.cancelBtnTxt}>CANCEL</Text>
-          </TouchableOpacity>
-
           {/* submit btn */}
           <TouchableOpacity style={styles.submitBtn} onPress={checkTextInput}>
             <Text style={styles.submitBtnTxt}>SUBMIT</Text>

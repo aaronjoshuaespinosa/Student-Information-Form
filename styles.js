@@ -88,6 +88,11 @@ const styles = StyleSheet.create({
     marginHorizontal: 100,
     marginTop: 20,
   },
+  headerImg: {
+    position: 'absolute',
+    resizeMode: 'stretch',
+    height: '100%',
+  },
   formContainer: {
     flex: 0.8,
     width: '100%',
@@ -140,27 +145,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginTop: 24,
   },
-  cancelBtn: {
-    flex: 0.5,
-    backgroundColor: '#CA5E57',
-    borderRadius: 5,
-    padding: 16,
-    marginLeft: 16,
-    marginRight: 8,
-  },
-  cancelBtnTxt: {
-    fontWeight: '600',
-    fontSize: 16,
-    textAlign: 'center',
-    color: '#ebebeb',
-  },
   submitBtn: {
-    flex: 0.5,
+    flex: 1,
     backgroundColor: '#4CB543',
     borderRadius: 5,
     padding: 16,
-    marginLeft: 8,
-    marginRight: 16,
+    marginHorizontal: 16,
   },
   submitBtnTxt: {
     fontWeight: '600',
