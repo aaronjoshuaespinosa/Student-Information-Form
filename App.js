@@ -107,7 +107,7 @@ export default function App() {
 
       {/* header */}
       <View style={styles.headerContainer}>
-        <Image style={styles.headerImg} source={require('./assets/headerImg.png')} />
+        <Image style={styles.headerImg} source={require('./assets/headerImg.png ')} />
         <Text style={styles.headerTxt}>Student Information</Text>
       </View>
 
